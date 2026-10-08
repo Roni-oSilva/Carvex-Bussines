@@ -8,10 +8,11 @@
 <meta name="theme-color" content="#020a24">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Orbitron:wght@600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800;900&family=Playfair+Display:ital,wght@1,500;1,600&family=Roboto:wght@400;500;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="progress" id="progress"></div>
 
 <header class="nav" id="nav">
   <a class="logo" href="#top" aria-label="Carvex"><span class="logo-q">C</span>ARVEX</a>
@@ -29,9 +30,10 @@
 <!-- 1. HERO -->
 <section class="hero">
   <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="bubbles" id="bubbles" aria-hidden="true"></div>
   <div class="hero-copy">
-    <p class="eyebrow">CARVEX BUSINESS</p>
-    <h1>SUA EMPRESA TEM <span class="accent">UM PROBLEMA.</span><br>A CARVEX MONTA <span class="accent">A SOLUÇÃO.</span></h1>
+    <p class="serif eyebrow">Você apresenta o problema.</p>
+    <h1><span class="ln"><span>SUA EMPRESA TEM <em class="accent">UM PROBLEMA.</em></span></span><span class="ln"><span class="d2">A CARVEX MONTA <em class="accent">A SOLUÇÃO.</em></span></span></h1>
     <p class="sub">Encontre um kit completo com ferramentas, automações e soluções pensadas para as necessidades da sua empresa.</p>
     <div class="cta-row">
       <a class="btn btn-lg" href="#kits">ENCONTRAR MEU KIT</a>
@@ -53,43 +55,51 @@
   </figure>
 </section>
 
+<div class="ticker" aria-hidden="true"><div class="track">
+  <span>INEFICIÊNCIA</span><span>CUSTOS ALTOS</span><span>PROCESSO LENTO</span><span>DADOS SOLTOS</span><span>GARGALO OPERACIONAL</span><span>ATENDIMENTO FRACO</span><span>FALTA DE RELATÓRIOS</span>
+  <span>INEFICIÊNCIA</span><span>CUSTOS ALTOS</span><span>PROCESSO LENTO</span><span>DADOS SOLTOS</span><span>GARGALO OPERACIONAL</span><span>ATENDIMENTO FRACO</span><span>FALTA DE RELATÓRIOS</span>
+</div></div>
+
 <!-- 2. CONCEITO -->
 <section class="concept">
   <div class="wrap">
-    <h2 class="big">O PROBLEMA É SÓ A <span class="accent">PONTA DO ICEBERG.</span></h2>
-    <p class="lead">Por trás de um problema existem processos, custos, atendimento, vendas e tarefas que podem estar prejudicando sua empresa.</p>
+    <p class="serif rv">O problema é só a</p>
+    <h2 class="big rv">PONTA DO <span class="accent">ICEBERG.</span></h2>
+    <p class="lead rv">Por trás de um problema existem processos, custos, atendimento, vendas e tarefas que podem estar prejudicando sua empresa.</p>
     <div class="divider"></div>
-    <h2 class="big">É AÍ QUE ENTRA <span class="accent">A CARVEX.</span></h2>
-    <p class="lead">Transformamos problemas empresariais em soluções completas.</p>
+    <p class="serif rv">É aí que entra</p>
+    <h2 class="big rv">A <span class="accent">CARVEX.</span></h2>
+    <p class="lead rv">Transformamos problemas empresariais em soluções completas.</p>
   </div>
 </section>
 
 <!-- 3. KITS -->
 <section class="kits" id="kits">
   <div class="wrap">
-    <h2 class="big center">ESCOLHA O KIT <span class="accent">DA SUA EMPRESA</span></h2>
-    <div class="grid" id="kitGrid"></div>
+    <p class="serif center rv">Escolha o kit</p>
+    <h2 class="big center rv">DA SUA <span class="accent">EMPRESA</span></h2>
+    <ul class="klist" id="kitGrid"></ul>
   </div>
 </section>
 
 <!-- 5. DIFERENCIAL -->
 <section class="diff" id="diferencial">
   <div class="wrap">
-    <h2 class="big center">NÃO VENDEMOS <span class="accent">APENAS FERRAMENTAS.</span></h2>
-    <p class="lead center">Montamos soluções de acordo com os problemas da sua empresa.</p>
-    <div class="flow">
-      <div class="flow-step"><span>01</span>PROBLEMA</div>
+    <h2 class="big center rv">NÃO VENDEMOS <span class="accent">APENAS FERRAMENTAS.</span></h2>
+    <p class="lead center rv">Montamos soluções de acordo com os problemas da sua empresa.</p>
+    <div class="flow" id="flow">
+      <div class="flow-step rv"><span>01</span>PROBLEMA</div>
       <div class="flow-arrow" aria-hidden="true"></div>
-      <div class="flow-step"><span>02</span>SOLUÇÃO</div>
+      <div class="flow-step rv"><span>02</span>SOLUÇÃO</div>
       <div class="flow-arrow" aria-hidden="true"></div>
-      <div class="flow-step hot"><span>03</span>KIT CARVEX</div>
+      <div class="flow-step hot rv"><span>03</span>KIT CARVEX</div>
     </div>
   </div>
 </section>
 
 <!-- 6. DIAGNÓSTICO -->
 <section class="diag" id="diagnostico">
-  <div class="wrap diag-card glass">
+  <div class="wrap diag-card glass rv">
     <div>
       <h2 class="big">NÃO SABE QUAL KIT <span class="accent">ESCOLHER?</span></h2>
       <p class="lead">Conte o que está acontecendo na sua empresa e descubra qual solução faz mais sentido para você.</p>
@@ -102,7 +112,8 @@
 <section class="final">
   <div class="glow g3"></div>
   <div class="wrap">
-    <h2 class="huge">QUAL PROBLEMA SUA EMPRESA <span class="accent">PRECISA RESOLVER?</span></h2>
+    <p class="serif center rv">Qual problema sua empresa</p>
+    <h2 class="huge rv">PRECISA <span class="accent">RESOLVER?</span></h2>
     <p class="lead center">Encontre uma solução completa com a Carvex.</p>
     <a class="btn btn-xl" href="#kits">ENCONTRAR MINHA SOLUÇÃO</a>
   </div>
@@ -131,9 +142,10 @@
 <div class="modal" id="kitModal" role="dialog" aria-modal="true" aria-labelledby="kitTitle" hidden>
   <div class="modal-card glass">
     <button class="close" data-close aria-label="Fechar">×</button>
-    <div class="kit-icon" id="kitIcon"></div>
+    <div class="ico big-ico" id="kitIcon"></div>
     <h3 id="kitTitle"></h3>
     <p class="lead" id="kitText"></p>
+    <p class="serif sm">Dores que o kit resolve</p>
     <ul class="cats" id="kitCats"></ul>
     <a class="btn btn-lg" id="kitCta" target="_blank" rel="noopener">QUERO ESSE KIT</a>
   </div>
