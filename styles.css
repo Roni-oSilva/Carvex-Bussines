@@ -210,3 +210,7 @@ form .btn{margin-top:24px;width:100%}
 .accent{white-space:nowrap}
 section[id]{scroll-margin-top:70px}
 html,body{overflow-x:clip}
+
+/* desempenho: sem animacoes infinitas no celular */
+@media (hover:none),(pointer:coarse){.btn::after,.btn-xl,.flow-arrow::before,.flow-step.hot{animation:none!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
